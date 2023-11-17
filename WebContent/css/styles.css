@@ -1,0 +1,299 @@
+/*
+	CSS File
+		padding: top, right, bottom, left
+*/
+
+* {box-sizing: border-box;}
+
+body{
+	background-image: url('freshfood.jpg'); 
+	padding-top: 0px; 
+	margin-top:0px; 
+	margin-left: 0px; 
+	margin-right: 0px;
+}
+
+/* Header */
+
+.header_2column_left{
+	float: left;
+	width: 50%;
+	margin: 0px;
+	padding-top: 16px;
+}
+.header_2column_right{
+	float: right;
+	width: 50%;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  opacity: 0.7;
+  padding: 20px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header a:hover {
+  color: black;
+}
+
+.header a.active {
+  background-color: green;
+  color: white;
+}
+
+.header-right {
+  float: right;
+  padding-left: 20px;
+  width: 6%;
+}
+
+.header-right_cart {
+	float: left;
+	width: 8%;
+ }
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }y
+  .header-right_cart {
+    float: none;
+  }
+}
+
+/* Footer */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f1f1f1;
+  padding: 10px;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer a{ 
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.footer-left{
+  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+.footer-right{
+  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+/* main content */
+
+.content{
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding-top: 110px;  
+}
+
+/* button */
+
+.button {
+    background-color: white;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.button:hover {
+	background-color: #45a049;
+}
+
+
+
+
+
+/********************************/ 
+/*  Begins css for login.html   */
+/********************************/
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.password {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+.message{
+  font-size: 30px;
+}
+
+
+
+
+
+/***********************************/ 
+/*  Begins css for contact.html   */
+/***********************************/
+
+input[type=name], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=submit] {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+/***********************************/ 
+/*  Begins css for inventory.jsp   */
+/***********************************/
+
+.product{
+	background-color: #ccc;
+	opacity: 1.0;
+	color: black;
+	padding: 20px 0px 80px 0px;			/* padding: top, right, bottom, left */
+	display: block;
+	border-style: solid; 
+ }
+.product_image{
+	float: left;
+	width: 30%;
+	padding: 0px 0px 10px 0px;
+}
+.product_desc{
+	float: right;
+	width: 70%;
+	padding: 0px 0px 0px 0px;
+}
+.product_desc_main{
+	font-size: 25px;
+	font-weight: bold; 
+}
+.product_desc_text{
+	font-size: 20px;
+	display: block;
+}
+.product_2column_btn{
+	float: left;
+	width: 50%;
+}
+.product_2column_qtn{
+	float: right;
+	width: 50%;
+}
+.qtn_text{
+	font-size: 20px;
+}
+.product_desc_btn {
+	font-size: 15px;
+	padding: 2px 10px 2px 10px;
+}
+.scroll{
+	margin-top: 100px;
+    width: 1100px;
+    height: 700px;
+    overflow: auto;
+	padding: 20px;
+}
+.price{
+	font-size: 20px;
+}
+
+.red_text {
+	color: red;
+	text-decoration: bold;
+}
+
+
+
+
+
+
+
