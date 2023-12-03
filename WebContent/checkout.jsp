@@ -87,8 +87,12 @@ for (String each : c.keySet()) {%>
 <%}%>
 <p>Your total is $<%=money.format(price) %></p>
 <a style="text-decoration: none;" href="inventory.jsp"><button class="button">Back to Inventory</button></a>
-<a style="text-decoration: none;" href="confirmation.jsp"><button class="button">Confirm Purchase</button></a>
+
 </div>
+<form action="Dispatcher" method="post">
+  <input type="hidden" name="action" value="confirm">
+  <input type="submit" value="Confirm Purchase">
+</form>
 
  <div class="footer">
   <p class="footer-left"><a href="contact.html">Contact</a></p>
