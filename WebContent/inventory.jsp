@@ -3,6 +3,7 @@
 <%@ page import="java.util.*" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="java.text.DecimalFormat" %>
+<%@ page import="freshfood.Credentials" %>
 
 <%	
 //check whether user is logged in, if not logged in redirect to login.jsp
@@ -16,14 +17,6 @@
 // start sql stuff
 	Class.forName("com.mysql.cj.jdbc.Driver");
 
-	String host = "sql9.freemysqlhosting.net";
-	String databaseName = "sql9654705";
-	String port = "3306";
-
-	String url  = "jdbc:mysql://" + host + ":" + port + "/" + databaseName;
-	
-	String usernameDB = "sql9654705";
-	String passwordDB = "cBCQdIXAv4";
 // end sql stuff
 %>
 
@@ -109,7 +102,7 @@
 <!-- <form action="welcome.jsp" method="POST" class="login-form" id="login-form"> -->	<!-- div for desc text must be 20 characters or more -->
 
 <%
-	try (Connection connection = DriverManager.getConnection(url, usernameDB, passwordDB)) {
+	try (Connection connection = DriverManager.getConnection(Credentials.URL, Credentials.USER_NAME, Credentials.PASSWORD)) {
 		String sql = "SELECT * FROM inventory;";
     	Statement statement = connection.createStatement();
     	ResultSet itemList = statement.executeQuery(sql);

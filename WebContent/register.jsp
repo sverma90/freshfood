@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <%@ page import="java.sql.*" %>
+<%@ page import="freshfood.Credentials" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,17 +35,9 @@
 
 <%	// start sql stuff
 	Class.forName("com.mysql.cj.jdbc.Driver");
-
-	String host = "sql9.freemysqlhosting.net";
-	String databaseName = "sql9654705";
-	String port = "3306";
-
-	String url  = "jdbc:mysql://" + host + ":" + port + "/" + databaseName;
-	
-	String usernameDB = "sql9654705";
-	String passwordDB = "cBCQdIXAv4";
-		
-	try (Connection connection = DriverManager.getConnection(url, usernameDB, passwordDB)) {
+	System.out.println("we are on this step");
+	try (Connection connection = DriverManager.getConnection(Credentials.URL, Credentials.USER_NAME, Credentials.PASSWORD)) {
+		System.out.println("we are connected to the database");
 		String sql = "SELECT * FROM users;";
     	Statement statement = connection.createStatement();
     	ResultSet userList = statement.executeQuery(sql);

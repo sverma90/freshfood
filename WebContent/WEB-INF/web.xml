@@ -10,27 +10,6 @@
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
   
-<!--   <servlet>
-    <description></description>
-    <display-name>JavaServlet</display-name>
-    <servlet-name>JavaServlet</servlet-name>
-    <servlet-class>sverma28_assignment10.JavaServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>JavaServlet</servlet-name>
-    <url-pattern>/JavaServlet</url-pattern>
-  </servlet-mapping> 
-  <servlet>
-    <description></description>
-    <display-name>EmailServlet</display-name>
-    <servlet-name>EmailServlet</servlet-name>
-    <servlet-class>freshfood.EmailServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>EmailServlet</servlet-name>
-    <url-pattern>/EmailServlet</url-pattern>
-  </servlet-mapping>-->
-  
   <security-constraint>
     <web-resource-collection>
         <web-resource-name>confirmation</web-resource-name>

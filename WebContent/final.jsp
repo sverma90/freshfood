@@ -3,6 +3,7 @@
    <%@ page import="java.util.*" %>
    <%@ page import="java.sql.*" %>
    <%@ page import="java.text.DecimalFormat" %>
+   <%@ page import="freshfood.Credentials" %>
 <!DOCTYPE html>
 <%
 //check whether user is logged in, if not logged in redirect to login.jsp
@@ -18,22 +19,13 @@ String email = (String)session.getAttribute("email");
 HashMap<String, Integer> c = (HashMap<String, Integer>) session.getAttribute("cart");
 Double price = 0.00;
 
-
 Class.forName("com.mysql.cj.jdbc.Driver");
 
-String host = "sql9.freemysqlhosting.net";
-String databaseName = "sql9654705";
-String port = "3306";
-
-String url  = "jdbc:mysql://" + host + ":" + port + "/" + databaseName;
-
-String usernameDB = "sql9654705";
-String passwordDB = "cBCQdIXAv4";
 String userName = request.getParameter("name");
 String userEmail = request.getParameter("email");
 String userPassword = request.getParameter("password");
 	
-try(Connection connection = DriverManager.getConnection(url, usernameDB, passwordDB)){
+try(Connection connection = DriverManager.getConnection(Credentials.URL, Credentials.USER_NAME, Credentials.PASSWORD)){
 	boolean isAlreadyInDB = false;
 	String sql = "SELECT * FROM inventory;";
 	Statement statement = connection.createStatement();
