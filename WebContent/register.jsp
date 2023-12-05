@@ -35,9 +35,7 @@
 
 <%	// start sql stuff
 	Class.forName("com.mysql.cj.jdbc.Driver");
-	System.out.println("we are on this step");
 	try (Connection connection = DriverManager.getConnection(Credentials.URL, Credentials.USER_NAME, Credentials.PASSWORD)) {
-		System.out.println("we are connected to the database");
 		String sql = "SELECT * FROM users;";
     	Statement statement = connection.createStatement();
     	ResultSet userList = statement.executeQuery(sql);

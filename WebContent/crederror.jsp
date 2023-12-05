@@ -22,7 +22,7 @@
     		String psw = userList.getString("password");
     		if (userName.equals(name) || userEmail.equals(email)) {
     			isAlreadyInDB = true;
-    			break;
+    			break; // stay on this page because this info is already taken
     		}
     	}
     	if (!isAlreadyInDB) {
