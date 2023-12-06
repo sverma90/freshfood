@@ -58,7 +58,7 @@ try(Connection connection = DriverManager.getConnection(Credentials.URL, Credent
 	<a href="index.jsp" class="logo">Fresh Foods</a>
 	<% 	if (session.getAttribute("name") != null) { %>	
 	<div class="header-right header_2column_right">
-		<a class="active" href="logout.jsp">Log Out</a>
+		<a class="active" href="logout.jsp">Logout</a>
 	</div>
 	<div class="header-right header_2column_right">
     	<a class="active" href="checkout.jsp">Checkout</a>
@@ -72,7 +72,7 @@ try(Connection connection = DriverManager.getConnection(Credentials.URL, Credent
 <h3>Thank you for shopping!!</h3>
 <h4>A confirmation email has been sent to <%=email %></h4>
 <form action="inventory.jsp">
-	<input type="submit" value="back to shopping">
+	<input type="submit" value="Back To Shopping">
 </form>
 
 </div>

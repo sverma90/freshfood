@@ -62,7 +62,7 @@ try(Connection connection = DriverManager.getConnection(Credentials.URL, Credent
 	<a href="index.jsp" class="logo">Fresh Foods</a>
 	<% 	if (session.getAttribute("name") != null) { %>	
 	<div class="header-right header_2column_right">
-		<a class="active" href="logout.jsp">Log Out</a>
+		<a class="active" href="logout.jsp">Logout</a>
 	</div>
 	<div class="header-right header_2column_right">
     	<a class="active" href="checkout.jsp">Checkout</a>

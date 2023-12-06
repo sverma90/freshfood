@@ -15,7 +15,7 @@
 	<% 	String name=(String)session.getAttribute("name");
 		if (session.getAttribute("name") != null) { %>
 	<div class="header-right header_2column_right">
-		<a class="active" href="logout.jsp">Log Out</a>
+		<a class="active" href="logout.jsp">Logout</a>
 	</div>
    	<div class="header-right header_2column_left">
 		<span>Hello <%= name %></span>

@@ -54,7 +54,7 @@ try(Connection connection = DriverManager.getConnection(Credentials.URL, Credent
 	<a href="index.jsp" class="logo">Fresh Foods</a>
 	<% 	if (session.getAttribute("name") != null) { %>	
 	<div class="header-right header_2column_right">
-		<a class="active" href="logout.jsp">Log Out</a>
+		<a class="active" href="logout.jsp">Logout</a>
 	</div>
 	<div class="header-right header_2column_right">
     	<a class="active" href="checkout.jsp">Checkout</a>
@@ -67,9 +67,9 @@ try(Connection connection = DriverManager.getConnection(Credentials.URL, Credent
 <div class="content scroll">
 <h3>Confirmation Page</h3>
 
-<p>Dear <span class="bold"><%=name %></span>, your total cost is $<%=money.format(price) %><span class="bold"></span></p>
+<p style="font-size: 30px;">Dear <span class="bold"><%=name %></span>, your total cost is $<%=money.format(price) %><span class="bold"></span></p>
 <form action="final.jsp">
-<fieldset>
+<fieldset style="font-size: 25px;">
  <legend class="bold">Payment Details:</legend>
   <span>Credit Card Type: </span>
   <input type="radio" name="employment" value="Discover" required>
@@ -78,6 +78,9 @@ try(Connection connection = DriverManager.getConnection(Credentials.URL, Credent
   <label for="student">Visa</label> 
   <input type="radio" name="employment" value="Mastercard" required>
   <label for="speaker">Mastercard</label> 
+   <br/><br/>
+  <span>Full Street Address (incl. City, State, Zip): </span>
+   <input type="text" name="streetaddress" required>
    <br/><br/>
   <span>Credit Card Number: </span>
    <input type="password" inputmode="numeric" pattern="[0-9]{16}" name="cardnumber" required>
@@ -107,13 +110,14 @@ try(Connection connection = DriverManager.getConnection(Credentials.URL, Credent
     <option value="7">2029</option>
     <option value="8">2030</option>
   </select>
+  <input style="font-size: 30px;" type="submit" value="Checkout">
  </fieldset> 
- <br><br>
- <fieldset>
-  <legend class="bold">More Actions:</legend>
-	<button type="button" onclick="">Cancel</button>
-	<input type="submit" value="Checkout">
- </fieldset>
+ <br>
+<!--  <fieldset>
+  <legend style="font-size: 30px;" class="bold">More Actions:</legend>
+	<button style="font-size: 30px;" type="button" onclick="">Cancel</button>
+	
+ </fieldset> -->
  </form>
 
 </div>

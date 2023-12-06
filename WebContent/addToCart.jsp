@@ -37,7 +37,7 @@ response.sendRedirect(redirectUrl);
      <a class="active" href="checkout.jsp">Shopping Cart</a>
     </div>
     <div class="header-right">
-     <a class="active" href="logout.jsp">Log Out</a>  
+     <a class="active" href="logout.jsp">Logout</a>  
     </div>
   
 </div>
