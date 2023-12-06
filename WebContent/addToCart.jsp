@@ -8,7 +8,11 @@
 
 HashMap<String, Integer> c = (HashMap<String, Integer>)session.getAttribute("cart");
 int quantityInStock = Integer.parseInt(request.getParameter("quantityInStock"));
-int q = Integer.parseInt(request.getParameter("quantity"));
+//int q = Integer.parseInt(request.getParameter("quantity"));
+int q = 0;
+ if (!request.getParameter("quantity").equals("") && request.getParameter("quality") != null) {
+       q = Integer.parseInt(request.getParameter("quantity"));
+}
 String prod = request.getParameter("product");
 q += c.getOrDefault(prod,0);
 String redirectUrl = "inventory.jsp";
